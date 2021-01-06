@@ -12,6 +12,49 @@
 * github：[https://github.com/leodflag](https://github.com/leodflag)
 * 部落格：[https://leodflagblog.wordpress.com/](https://leodflagblog.wordpress.com/)
 
+### 作品
+---
+**Python**
+
+* TimesML
+
+    針對時間序列數據進行分析的自主開發的API套件，結合統計模型與機器學習模型
+    * [TimesML (github)](https://github.com/leodflag/TimesML)
+    * [TimesML (PyPI)](https://pypi.org/project/TimesML/)
+    * [User Manual](https://leodflag.github.io/TimesML_html/)
+    * [Quick Start Guide](https://github.com/leodflag/TimesML/blob/master/TimesML_example.ipynb)
+    ![image](https://github.com/leodflag/leodflag.github.io/blob/master/portfolio_img/TimesMLChart.png)
+
+* Optimization Algorithm
+
+    * [Gene Algorithm(基因演算法)](https://github.com/leodflag/Python_Optimization-Algorithm)
+    ![image](https://github.com/leodflag/leodflag.github.io/blob/master/portfolio_img/TimesMLChart.png)
+    * [Particle Swarm Optimization(粒子群最佳化演算法)](https://github.com/leodflag/Python_PSO)
+    * [Lion Algorithm(獅群演算法)](https://github.com/leodflag/Python_LionAlgorithm)
+
+* Machine Learning
+
+    * [Perceptron(感知機)](https://github.com/leodflag/Python_PLA)
+    * [Ordinary Least Squares Linear Regression(普通最小平方線性迴歸)](https://github.com/leodflag/Python_Linear_Regression)
+    * [Kmeans Clustering(K-means分群)](https://github.com/leodflag/Python_Kmeans_Clustering)
+    * [Convolutional Neural Network(卷積神經網路)](https://github.com/leodflag/Python_mnist_keras_cnn)
+
+* [Finite-state Machine](https://github.com/leodflag/Python_DNA_FSM)
+
+
+**C++**
+
+ * Data Structure
+
+    * [Linked List(鏈結串列)](https://github.com/leodflag/CPP_Linked_List)
+    * [DecisionTree(決策樹)](https://github.com/leodflag/CPP_DecisionTree)
+
+* Machine Learning
+
+    * [Perceptron(感知機)](https://github.com/leodflag/CPP_PLA)
+    * [Multiategory Classification Perceptron](https://github.com/leodflag/CPP_Multicategory-Classification_PLA)
+    * [Multilayer Perceptron(多層感知機)](https://github.com/leodflag/CPP_MLP)
+
 ### 經歷
 ----
 #### 論壇講者
@@ -64,44 +107,3 @@
     Eviews
     CMoney
     Illustrator
-
-### 作品
----
-**Python**
-
-* TimesML
-
-    針對時間序列數據進行分析的自主開發的API套件，結合統計模型與機器學習模型
-    * [TimesML (github)](https://github.com/leodflag/TimesML)
-    * [TimesML (PyPI)](https://pypi.org/project/TimesML/)
-    * [User Manual](https://leodflag.github.io/TimesML_html/)
-    * [Quick Start Guide](https://github.com/leodflag/TimesML/blob/master/TimesML_example.ipynb)
-
-* Optimization Algorithm
-
-    * [Gene Algorithm(基因演算法)](https://github.com/leodflag/Python_Optimization-Algorithm)
-    * [Particle Swarm Optimization(粒子群最佳化演算法)](https://github.com/leodflag/Python_PSO)
-    * [Lion Algorithm(獅群演算法)](https://github.com/leodflag/Python_LionAlgorithm)
-
-* Machine Learning
-
-    * [Perceptron(感知機)](https://github.com/leodflag/Python_PLA)
-    * [Ordinary Least Squares Linear Regression(普通最小平方線性迴歸)](https://github.com/leodflag/Python_Linear_Regression)
-    * [Kmeans Clustering(K-means分群)](https://github.com/leodflag/Python_Kmeans_Clustering)
-    * [Convolutional Neural Network(卷積神經網路)](https://github.com/leodflag/Python_mnist_keras_cnn)
-
-* [Finite-state Machine](https://github.com/leodflag/Python_DNA_FSM)
-
-
-**C++**
-
- * Data Structure
-
-    * [Linked List(鏈結串列)](https://github.com/leodflag/CPP_Linked_List)
-    * [DecisionTree(決策樹)](https://github.com/leodflag/CPP_DecisionTree)
-
-* Machine Learning
-
-    * [Perceptron(感知機)](https://github.com/leodflag/CPP_PLA)
-    * [Multiategory Classification Perceptron](https://github.com/leodflag/CPP_Multicategory-Classification_PLA)
-    * [Multilayer Perceptron(多層感知機)](https://github.com/leodflag/CPP_MLP)
