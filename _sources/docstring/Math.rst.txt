@@ -1,0 +1,21 @@
+Math package
+============
+
+Submodules
+----------
+
+Math.Statistics module
+----------------------
+
+.. automodule:: Math.Statistics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: Math
+   :members:
+   :undoc-members:
+   :show-inheritance:

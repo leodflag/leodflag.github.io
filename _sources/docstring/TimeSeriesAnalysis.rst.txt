@@ -1,0 +1,37 @@
+TimeSeriesAnalysis package
+==========================
+
+Submodules
+----------
+
+TimeSeriesAnalysis.Chart module
+-------------------------------
+
+.. automodule:: TimeSeriesAnalysis.Chart
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+TimeSeriesAnalysis.Model module
+-------------------------------
+
+.. automodule:: TimeSeriesAnalysis.Model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+TimeSeriesAnalysis.ProcessData module
+-------------------------------------
+
+.. automodule:: TimeSeriesAnalysis.ProcessData
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: TimeSeriesAnalysis
+   :members:
+   :undoc-members:
+   :show-inheritance:
