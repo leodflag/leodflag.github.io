@@ -1,0 +1,9 @@
+Welcome to TimesML's documentation!
+===================================
+.. toctree::
+   :maxdepth: 2
+
+   readme
+   indices
+   docstring/Math
+   docstring/TimeSeriesAnalysis
