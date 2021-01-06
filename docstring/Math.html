@@ -1,0 +1,1013 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Math package &mdash; TimesML 0.0.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TimeSeriesAnalysis package" href="TimeSeriesAnalysis.html" />
+    <link rel="prev" title="Indices and tables" href="../indices.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> TimesML
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">TimesML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#about">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#timesml-github">TimesML (github)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#timesml-pypi">TimesML (PyPI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#list-of-module">List of module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#math">Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#timeseriesanalysis">TimeSeriesAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#simple-example">Simple example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#references">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#mit-license">MIT License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indices.html">Indices and tables</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Math package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Math.Statistics">Math.Statistics module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Math">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#math">Math</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module">module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TimeSeriesAnalysis.html">TimeSeriesAnalysis package</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TimesML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Math package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/docstring/Math.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="math-package">
+<h1>Math package<a class="headerlink" href="#math-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Math.Statistics">
+<span id="math-statistics-module"></span><h2>Math.Statistics module<a class="headerlink" href="#module-Math.Statistics" title="Permalink to this headline">¶</a></h2>
+<p>This module contains statistics calculation function.</p>
+<p>Addition, subtraction, multiplication, and division of lists, as well as basic statistical calculation functions
+such as variance, standard deviation, and autocorrelation coefficient.</p>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>chack_list_all_num(listA) -&gt; bool</dt><dd><p>Determine the content of the list as one numerical data.</p>
+</dd>
+<dt>plus(listA, listB) -&gt; list</dt><dd><p>The two lists are added element by element.</p>
+</dd>
+<dt>sub(listA, listB) -&gt; list</dt><dd><p>Subtract two lists element by element.</p>
+</dd>
+<dt>mult(listA, listB) -&gt; list</dt><dd><p>Multiply two lists element by element.</p>
+</dd>
+<dt>div(listA, listB) -&gt; list</dt><dd><p>Divide two lists element by element.</p>
+</dd>
+<dt>log(listA) -&gt; list:</dt><dd><p>Multiply all the numerical elements in the list by the natural logarithm.</p>
+</dd>
+<dt>round_list(listA, ndigits: int) -&gt; list:</dt><dd><p>Take all the values in the list to a few digits after the decimal point.</p>
+</dd>
+<dt>mean(listA) -&gt; float</dt><dd><p>Calculate arithmetic mean of numerical data in a list.</p>
+</dd>
+<dt>variance(listA) -&gt; float</dt><dd><p>Calculate the variance of all elements in a list.</p>
+</dd>
+<dt>standard_deviation(listA) -&gt; float</dt><dd><p>Calculate the standard deviation of all elements in a list.</p>
+</dd>
+<dt>covariance(listA, listB) -&gt; float</dt><dd><p>Calculate the covariance of two lists of one-dimensional data.</p>
+</dd>
+<dt>coefficient_of_variation(listA) -&gt; float</dt><dd><p>Calculate the coefficient of variation of all elements in a list.</p>
+</dd>
+<dt>correlation_coefficient(listA, listB) -&gt; float</dt><dd><p>Calculate the linear correlation coefficient  of two lists of one-dimensional data.</p>
+</dd>
+<dt>coefficient_of_determination(listA, listB) -&gt; float</dt><dd><p>Calculate the coefficient of determination  of two lists of one-dimensional data.</p>
+</dd>
+<dt>mean_square_error(target_list, predict_list) -&gt; float</dt><dd><p>The regression index used to calculate the forecast error. Calculate the mean square error  of two lists of one-dimensional data.</p>
+</dd>
+<dt>mean_absolute_error(target_list, predict_list) -&gt; float:</dt><dd><p>The regression index used to calculate the forecast error. Calculate the mean absolute error(MAE) of two lists of one-dimensional data.</p>
+</dd>
+<dt>root_mean_squard_error(target_list, predict_list) -&gt; float:</dt><dd><p>The regression index used to calculate the forecast error. Calculate the root mean square error(RMSE) of two lists of one-dimensional data.</p>
+</dd>
+<dt>normalized_mean_squard_error(target_list, predict_list) -&gt; float:</dt><dd><p>The regression index used to calculate the forecast error. Calculate the normalized mean square error(NRMSE) of two lists of one-dimensional data.</p>
+</dd>
+<dt>ACF(listA, listB) -&gt; float</dt><dd><p>Calculate the autocorrelation coefficients of two lists of one-dimensional data.</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Pay attention to the input data type of the function.</p>
+<p>Use the function “list_to_dataframe” or “dataframe_to_list” of the module “TimeSeriesAnalysis.ProcessData” to convert the data type.</p>
+<dl class="py function">
+<dt id="Math.Statistics.ACF">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">ACF</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em>, <em class="sig-param"><span class="n">listB</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.ACF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the autocorrelation coefficients of two lists of one-dimensional data.</p>
+<p>Autocorrelation coefficients: The autocorrelation as a function of the lag.
+Algorithm: Calculate the autocorrelation coefficients according to the formula.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>listB</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. The autocorrelation coefficients of two lists of one-dimensional data.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A, “; listB=”, chack_B.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input ‘listA’ is changed to a one-dimensional list of numerical data.ListB has the same judgment and processing method as listA.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Autocorrelation coefficients wiki: <a class="reference external" href="https://en.wikipedia.org/wiki/Autocorrelation">https://en.wikipedia.org/wiki/Autocorrelation</a></p>
+<p>Autocorrelation Function: <a class="reference external" href="https://www.real-statistics.com/time-series-analysis/stochastic-processes/autocorrelation-function/">https://www.real-statistics.com/time-series-analysis/stochastic-processes/autocorrelation-function/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.chack_list_all_num">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">chack_list_all_num</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#Math.Statistics.chack_list_all_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the content of the list as one numerical data.</p>
+<p>This function is to check the input list, the content is a one-dimensional numerical list.
+If the input is not a one-dimensional list, or the content of the one-dimensional list is not all numerical data,
+it will be returned ‘False’, otherwise it will return ‘True’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool(True or False) ‘True’, one-dimensional numerical list. For example, [1,5,8,6,3]    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5]</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’listA’ is an empty list. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution:  Please do not enter ‘None’.Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.coefficient_of_determination">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">coefficient_of_determination</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">train_target</span></em>, <em class="sig-param"><span class="n">target_list</span></em>, <em class="sig-param"><span class="n">predict_list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.coefficient_of_determination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the coefficient of determination  of two lists of one-dimensional data.</p>
+<p>Coefficient of determination: Explainable variation / total variation. A measure of how much proportional
+dependent variable variation can be explained by regression lines and independent variables. The closer to 1,
+the variation explained by this regression line is close to 100%. Algorithm: Square after calculating the linear correlation coefficient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_list</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>predict_list</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. The coefficient of determination  of two lists of one-dimensional data.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: train_target=”,chack_train_target, “; target_list=”, chack_target_list, “; predict_list=”, chack_predict_list.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_train_target’ is’True’, it means that ‘train_target’ does not need to be changed; if it is’False’, the input ‘train_target’ is changed to a one-dimensional list of numerical data. ‘target_list’ and ‘predict_list’ have the same judgment and processing method as ‘train_target’.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Coefficient of determination: <a class="reference external" href="https://en.wikipedia.org/wiki/Coefficient_of_determination">https://en.wikipedia.org/wiki/Coefficient_of_determination</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.coefficient_of_variation">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">coefficient_of_variation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.coefficient_of_variation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the coefficient of variation of all elements in a list.</p>
+<p>Coefficient of variation: Can compare the standard deviation between different unit variables.
+Algorithm: First calculate the mean and standard deviation of the list, and finally divide the standard deviation
+by the mean and multiply by 100.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. The coefficient of variation of all elements in a list.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’listA’ is an empty list. Please change to a one-dimensional list of numerical data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data.</div>
+<div class="line">Solution: ‘listA’ contains a string or is two-dimensional list. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Coefficient of variation: <a class="reference external" href="https://en.wikipedia.org/wiki/Coefficient_of_variation">https://en.wikipedia.org/wiki/Coefficient_of_variation</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.correlation_coefficient">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">correlation_coefficient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em>, <em class="sig-param"><span class="n">listB</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.correlation_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the linear correlation coefficient  of two lists of one-dimensional data.</p>
+<p>Correlation coefficient: The strength of linear correlation between two variables.
+Algorithm: Calculate the linear correlation coefficient according to the formula.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>listB</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. The linear correlation coefficient  of two lists of one-dimensional data.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A, “; listB=”, chack_B.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input ‘listA’ is changed to a one-dimensional list of numerical data.ListB has the same judgment and processing method as listA.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Correlation coefficient: <a class="reference external" href="https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/">https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.covariance">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">covariance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em>, <em class="sig-param"><span class="n">listB</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.covariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the covariance of two lists of one-dimensional data.</p>
+<p>Covariance: After calculating the respective averages of the two lists, subtract the averages one by one and
+multiply them to form a value. Algorithm: After the entire list is calculated, all the values are added up, and finally
+divided by the length of the list minus one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>listB</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. The covariance of two lists of one-dimensional data.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A, “; listB=”, chack_B.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input ‘listA’ is changed to a one-dimensional list of numerical data.ListB has the same judgment and processing method as listA.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Covariance: <a class="reference external" href="https://en.wikipedia.org/wiki/Covariance">https://en.wikipedia.org/wiki/Covariance</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.div">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">div</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em>, <em class="sig-param"><span class="n">listB</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#Math.Statistics.div" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divide two lists element by element.</p>
+<p>Division: Divide the elements of two lists pair by pair, and return a list of results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>listB</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list. Result of division.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A, “; listB=”, chack_B.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input ‘listA’ is changed to a one-dimensional list of numerical data.ListB has the same judgment and processing method as listA.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.log">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#Math.Statistics.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiply all the numerical elements in the list by the natural logarithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list. Result of natural logarithm list.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A”.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input ‘listA’ is changed to a one-dimensional list of numerical data.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>log: <a class="reference external" href="https://en.wikipedia.org/wiki/Natural_logarithm">https://en.wikipedia.org/wiki/Natural_logarithm</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.mean">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">mean</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate arithmetic mean of numerical data in a list.</p>
+<p>Mean: Add all the numerical data in the list and divide by the length of the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. Arithmetic mean of numerical data in a list.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’listA’ is an empty list. Please change to a one-dimensional list of numerical data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data.</div>
+<div class="line">Solution: ‘listA’ contains a string or is two-dimensional list. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Mean: <a class="reference external" href="https://en.wikipedia.org/wiki/Mean">https://en.wikipedia.org/wiki/Mean</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.mean_absolute_error">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">mean_absolute_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target_list</span></em>, <em class="sig-param"><span class="n">predict_list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.mean_absolute_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regression indicators for numerical prediction. Calculate the mean absolute error (MAE) of two lists of one-dimensional data.</p>
+<blockquote>
+<div><p>Mean absolute error  can measure the error between actual observations and predicted values. The calculation method is to
+subtract the two lists, take the absolute value of each number and then add them all, and finally divide by the total number of list elements.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_list</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>predict_list</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. The root mean square error  of two lists of one-dimensional data.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A, “; listB=”, chack_B.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input ‘listA’ is changed to a one-dimensional list of numerical data.ListB has the same judgment and processing method as listA.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>MAE wiki :<a class="reference external" href="https://en.wikipedia.org/wiki/Mean_absolute_error">https://en.wikipedia.org/wiki/Mean_absolute_error</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.mean_square_error">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">mean_square_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target_list</span></em>, <em class="sig-param"><span class="n">predict_list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.mean_square_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regression indicators for numerical prediction. Calculate the mean square error (MSE) of two lists of one-dimensional data.</p>
+<p>Mean square error: Measures the mean of the square of the difference between the predicted value and the
+actual observed value. Algorithm: After subtracting the two lists, the resulting list is multiplied by itself, and finally
+all the values in the multiplied list are summed, and finally divide by the total number of list elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_list</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>predict_list</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. The mean square error  of two lists of one-dimensional data.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A, “; listB=”, chack_B.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input ‘listA’ is changed to a one-dimensional list of numerical data.ListB has the same judgment and processing method as listA.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Mean square error: <a class="reference external" href="https://en.wikipedia.org/wiki/Mean_squared_error">https://en.wikipedia.org/wiki/Mean_squared_error</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.mult">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">mult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em>, <em class="sig-param"><span class="n">listB</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#Math.Statistics.mult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiply two lists element by element.</p>
+<p>Multiplication: The elements of two lists are multiplied pair by pair to return a list of results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>listB</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list. The result of multiplication.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A, “; listB=”, chack_B.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input ‘listA’ is changed to a one-dimensional list of numerical data.ListB has the same judgment and processing method as listA.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.normalized_mean_squard_error">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">normalized_mean_squard_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target_list</span></em>, <em class="sig-param"><span class="n">predict_list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.normalized_mean_squard_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regression indicators for numerical prediction. Calculate the normalized mean square error (NRMSE、NRMSD) of two lists of one-dimensional data.</p>
+<p>NRMSE is a statistical value, and its method is to normalize RMSE. The normalization method used by this function is that
+the error between the maximum and minimum is used as the denominator, and RMSE is used as the numerator.</p>
+<p>The value is between 0 and 1. The closer the NRMSE is to 0, the smaller the error between the two and
+the closer the model predicted value to the target value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_list</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>predict_list</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. The normalized mean square error  of two lists of one-dimensional data.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A, “; listB=”, chack_B.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input ‘listA’ is changed to a one-dimensional list of numerical data.ListB has the same judgment and processing method as listA.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Normalized mean square error (NRMSD) wiki: <a class="reference external" href="https://en.wikipedia.org/wiki/Root-mean-square_deviation">https://en.wikipedia.org/wiki/Root-mean-square_deviation</a></p>
+<p>Normalized mean square error (NRMSE) function: <a class="reference external" href="https://www.marinedatascience.co/blog/2019/01/07/normalizing-the-rmse/">https://www.marinedatascience.co/blog/2019/01/07/normalizing-the-rmse/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.plus">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">plus</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em>, <em class="sig-param"><span class="n">listB</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#Math.Statistics.plus" title="Permalink to this definition">¶</a></dt>
+<dd><p>The two lists are added element by element.</p>
+<p>Addition: The two lists are added element by element, and return a list of sums.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>listB</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list. The result of adding the two lists.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A, “; listB=”, chack_B.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input’listA’ is changed to a one-dimensional list of numerical data.ListB has the same judgment and processing method as listA.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.root_mean_squard_error">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">root_mean_squard_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target_list</span></em>, <em class="sig-param"><span class="n">predict_list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.root_mean_squard_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regression indicators for numerical prediction. Calculate the root mean square error (RMSE) of two lists of one-dimensional data.</p>
+<p>Root mean square error  can measure the error between actual observations and predicted values.
+The calculation method is the square root of MSE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_list</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>predict_list</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. The root mean square error  of two lists of one-dimensional data.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A, “; listB=”, chack_B.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input ‘listA’ is changed to a one-dimensional list of numerical data.ListB has the same judgment and processing method as listA.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Root mean square  error(RMSE) wiki: <a class="reference external" href="https://en.wikipedia.org/wiki/Root-mean-square_deviation">https://en.wikipedia.org/wiki/Root-mean-square_deviation</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.round_list">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">round_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em>, <em class="sig-param"><span class="n">ndigits</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#Math.Statistics.round_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take all the values in the list to a few digits after the decimal point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>ndigits</strong> (<em>int. A few digits after the decimal point.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list. Return a list of values with a few digits after the decimal point.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’listA’ is an empty list. Please change to a one-dimensional list of numerical data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data.</div>
+<div class="line">Solution: ‘listA’ contains a string or is two-dimensional list. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.standard_deviation">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">standard_deviation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.standard_deviation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the standard deviation of all elements in a list.</p>
+<p>Standard deviation: Square root of variance. All the numerical data in the list are subtracted one by one
+from the mean value and then squared. Algorithm: After adding them up, divide by the length of the list minus
+one, and finally take the square root.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. The standard deviation of all elements in a list.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’listA’ is an empty list. Please change to a one-dimensional list of numerical data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data.</div>
+<div class="line">Solution: ‘listA’ contains a string or is two-dimensional list. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Standard deviation: <a class="reference external" href="https://en.wikipedia.org/wiki/Standard_deviation">https://en.wikipedia.org/wiki/Standard_deviation</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.sub">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">sub</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em>, <em class="sig-param"><span class="n">listB</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#Math.Statistics.sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subtract two lists element by element.</p>
+<p>Subtraction: Subtract the elements of two lists pair by pair, and return a list of results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>listB</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list. The result of subtracting the two lists.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: listA=”,chack_A, “; listB=”, chack_B.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_A’ is’True’, it means that ‘listA’ does not need to be changed; if it is’False’, the input ‘listA’ is changed to a one-dimensional list of numerical data.ListB has the same judgment and processing method as listA.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Math.Statistics.variance">
+<code class="sig-prename descclassname">Math.Statistics.</code><code class="sig-name descname">variance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">listA</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#Math.Statistics.variance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the variance of all elements in a list.</p>
+<p>Variance:The average of the squared distance of each number from its mean.
+Algorithm: All the numerical data in the list are subtracted one by one from the mean value
+and then squared, after adding them up and dividing by the length of the list minus one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>listA</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. The variance of all elements in a list.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’listA’ is an empty list. Please change to a one-dimensional list of numerical data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data.</div>
+<div class="line">Solution: ‘listA’ contains a string or is two-dimensional list. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Variance: <a class="reference external" href="https://en.wikipedia.org/wiki/Variance">https://en.wikipedia.org/wiki/Variance</a></p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-Math">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Math" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="math">
+<h3>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="module">
+<h4>module<a class="headerlink" href="#module" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Statistics</dt><dd><p>This module contains statistics calculation function.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="TimeSeriesAnalysis.html" class="btn btn-neutral float-right" title="TimeSeriesAnalysis package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../indices.html" class="btn btn-neutral float-left" title="Indices and tables" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, leodflag
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1863 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TimeSeriesAnalysis package &mdash; TimesML 0.0.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Math package" href="Math.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> TimesML
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">TimesML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#about">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#timesml-github">TimesML (github)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#timesml-pypi">TimesML (PyPI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#list-of-module">List of module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#math">Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#timeseriesanalysis">TimeSeriesAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#simple-example">Simple example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#references">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#mit-license">MIT License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indices.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Math.html">Math package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">TimeSeriesAnalysis package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-TimeSeriesAnalysis.Chart">TimeSeriesAnalysis.Chart module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class">Class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-TimeSeriesAnalysis.Model">TimeSeriesAnalysis.Model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class-1">Class 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class-2">Class 2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-TimeSeriesAnalysis.ProcessData">TimeSeriesAnalysis.ProcessData module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-TimeSeriesAnalysis">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#timeseriesanalysis">TimeSeriesAnalysis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module">module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TimesML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>TimeSeriesAnalysis package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/docstring/TimeSeriesAnalysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="timeseriesanalysis-package">
+<h1>TimeSeriesAnalysis package<a class="headerlink" href="#timeseriesanalysis-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-TimeSeriesAnalysis.Chart">
+<span id="timeseriesanalysis-chart-module"></span><h2>TimeSeriesAnalysis.Chart module<a class="headerlink" href="#module-TimeSeriesAnalysis.Chart" title="Permalink to this headline">¶</a></h2>
+<p>Time series data related drawing function.</p>
+<p>The drawing function of this module enables time series data to be presented in a
+chart and automatically saved under the folder name entered when creating the category.</p>
+<div class="section" id="class">
+<h3>Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>chart</dt><dd><p>When creating objects of this category, you can define content settings such as chart title, font, and chart size.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.historocal_trend_line_chart">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.Chart.</code><code class="sig-name descname">historocal_trend_line_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.historocal_trend_line_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw historical trend line chart with time series data. After the drawing is completed, it will be saved to the specified path ‘file_path’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.line_chart">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.Chart.</code><code class="sig-name descname">line_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">predict_data</span></em>, <em class="sig-param"><span class="n">chart_title</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.line_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Throw in two lists of one-dimensional numbers and draw a line chart, it will be saved to the specified path ‘file_path’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.lag_plot">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.Chart.</code><code class="sig-name descname">lag_plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.Series</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.lag_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scatter plot of lagging periods.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.ACF_chart">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.Chart.</code><code class="sig-name descname">ACF_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.Series</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">lags</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.ACF_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Autocorrelation coefficient chart.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.forecast_result_chart_model">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.Chart.</code><code class="sig-name descname">forecast_result_chart_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">Model</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">model_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'model'</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="o">=</span><span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="o">=</span><span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.forecast_result_chart_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>The overall prediction results of a model using the training set and the test set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.forecast_result_chart_predict">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.Chart.</code><code class="sig-name descname">forecast_result_chart_predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">Model</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">model_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'model'</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="o">=</span><span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="o">=</span><span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.forecast_result_chart_predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>The prediction result of a model using the test set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.statistics_infographic">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.Chart.</code><code class="sig-name descname">statistics_infographic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.Series</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">lags</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.statistics_infographic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Statistical graphs of time series data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.forecast_result_group_chart">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.Chart.</code><code class="sig-name descname">forecast_result_group_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">train</span></em>, <em class="sig-param"><span class="n">test</span></em>, <em class="sig-param"><span class="n">model_1</span><span class="p">:</span> <span class="n">Model</span></em>, <em class="sig-param"><span class="n">model_2</span><span class="p">:</span> <span class="n">Model</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">model_1_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'model1'</span></em>, <em class="sig-param"><span class="n">model_2_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'model2'</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.forecast_result_group_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combine and compare the prediction results of the two models.</p>
+</dd></dl>
+
+<p class="rubric">Notes</p>
+<p>Pay attention to the input data type of the function.</p>
+<p>Use the function “list_to_dataframe” or “dataframe_to_list” of the module “TimeSeriesAnalysis.ProcessData” to convert the data type.</p>
+<dl class="py class">
+<dt id="TimeSeriesAnalysis.Chart.chart">
+<em class="property">class </em><code class="sig-prename descclassname">TimeSeriesAnalysis.Chart.</code><code class="sig-name descname">chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">title_times_data</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'times_data'</span></em>, <em class="sig-param"><span class="n">figsize_length</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">9</span></em>, <em class="sig-param"><span class="n">figsize_width</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">6</span></em>, <em class="sig-param"><span class="n">fontsize_title</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">15</span></em>, <em class="sig-param"><span class="n">fontsize_x_y</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">8</span></em>, <em class="sig-param"><span class="n">fontsize_x_y_label</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">11</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Time series chart.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>title_times_data</strong> (<em>string</em><em>, </em><em>default = 'times_data'. Titles of all time series charts.</em>) – </p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Chart.chart.__figsize_length">
+<code class="sig-name descname">__figsize_length</code><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.__figsize_length" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int, default = 9. The length of the chart.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Chart.chart.__figsize_width">
+<code class="sig-name descname">__figsize_width</code><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.__figsize_width" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int, default = 6. The width of the chart.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Chart.chart.__fontsize_title">
+<code class="sig-name descname">__fontsize_title</code><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.__fontsize_title" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int, default = 15. Font size of chart title.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Chart.chart.__fontsize_x_y">
+<code class="sig-name descname">__fontsize_x_y</code><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.__fontsize_x_y" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int, default = 8. The font size of the chart x-axis and y-axis scale.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Chart.chart.__fontsize_x_y_label">
+<code class="sig-name descname">__fontsize_x_y_label</code><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.__fontsize_x_y_label" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int, default = 11. The font size of the chart’s x-axis and y-axis names.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Chart.chart.self.__data_lag_R">
+<code class="sig-prename descclassname">self.</code><code class="sig-name descname">__data_lag_R</code><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.self.__data_lag_R" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float, default = 0. The list contains correlation coefficient.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Chart.chart.self.__model1_result">
+<code class="sig-prename descclassname">self.</code><code class="sig-name descname">__model1_result</code><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.self.__model1_result" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list, default = [0,0,0, 0] The list contains mean_square_error、mean_absolute_error、root_mean_squard_error and normalized_mean_squard_error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Chart.chart.self.__model2_result">
+<code class="sig-prename descclassname">self.</code><code class="sig-name descname">__model2_result</code><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.self.__model2_result" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list, default = [0, 0, 0, 0] The list contains mean_square_error、mean_absolute_error、root_mean_squard_error and normalized_mean_squard_error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">lag_plot_R -&gt; dict</code></dt>
+<dd><p>Return correlation coefficient.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">forecast_result_group_model1_evaluation-&gt; dict</code></dt>
+<dd><p>Return model1 mse、mae、rmse、nrmse.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">forecast_result_group_model2_evaluation -&gt; dict</code></dt>
+<dd><p>Return model2 mse、mae、rmse、nrmse.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.n_order_difference_graph">
+<code class="sig-name descname">n_order_difference_graph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">periods</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'First'</span></em>, <em class="sig-param"><span class="n">log</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.n_order_difference_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw n-order difference graph with time series data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.historocal_trend_line_chart">
+<code class="sig-name descname">historocal_trend_line_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.historocal_trend_line_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw historical trend line chart with time series data. After the drawing is completed, it will be saved to the specified path ‘file_path’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.line_chart">
+<code class="sig-name descname">line_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">predict_data</span></em>, <em class="sig-param"><span class="n">chart_title</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.line_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Throw in two lists of one-dimensional numbers and draw a line chart, it will be saved to the specified path ‘file_path’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.lag_plot">
+<code class="sig-name descname">lag_plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.Series</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.lag_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scatter plot of lagging periods.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.ACF_chart">
+<code class="sig-name descname">ACF_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.Series</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">lags</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.ACF_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Autocorrelation coefficient chart.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.forecast_result_chart_model">
+<code class="sig-name descname">forecast_result_chart_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">Model</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">model_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'model'</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="o">=</span><span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="o">=</span><span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.forecast_result_chart_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>The overall prediction results of a model using the training set and the test set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.forecast_result_chart_predict">
+<code class="sig-name descname">forecast_result_chart_predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">Model</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">model_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'model'</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="o">=</span><span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="o">=</span><span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.forecast_result_chart_predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>The prediction result of a model using the test set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.statistics_infographic">
+<code class="sig-name descname">statistics_infographic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.Series</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">lags</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.statistics_infographic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Statistical graphs of time series data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.forecast_result_group_chart">
+<code class="sig-name descname">forecast_result_group_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">train</span></em>, <em class="sig-param"><span class="n">test</span></em>, <em class="sig-param"><span class="n">model_1</span><span class="p">:</span> <span class="n">Model</span></em>, <em class="sig-param"><span class="n">model_2</span><span class="p">:</span> <span class="n">Model</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">model_1_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'model1'</span></em>, <em class="sig-param"><span class="n">model_2_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'model2'</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.forecast_result_group_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combine and compare the prediction results of the two models.</p>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">Math.Statistics</span> <span class="k">as</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">TimeSeriesAnalysis.ProcessData</span> <span class="k">as</span> <span class="nn">Data</span>
+<span class="kn">import</span> <span class="nn">TimeSeriesAnalysis.Chart</span> <span class="k">as</span> <span class="nn">Chart</span>
+<span class="kn">import</span> <span class="nn">TimeSeriesAnalysis.Model</span> <span class="k">as</span> <span class="nn">Model</span>
+
+<span class="n">col_name</span> <span class="o">=</span> <span class="s1">&#39;US&#39;</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;test_data/g20_new_c.csv&#39;</span>
+<span class="n">times_data_id</span> <span class="o">=</span> <span class="s1">&#39;US&#39;</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="s1">&#39;US&#39;</span>
+
+<span class="n">chart</span> <span class="o">=</span> <span class="n">Chart</span><span class="o">.</span><span class="n">chart</span><span class="p">(</span><span class="n">title_times_data</span><span class="o">=</span><span class="n">times_data_id</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">col_name</span><span class="p">)</span>
+<span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">Data</span><span class="o">.</span><span class="n">split_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">AutoRegressive</span><span class="p">(</span><span class="n">lags</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+
+<span class="n">model1</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">AutoRegressive</span><span class="p">(</span><span class="n">lags</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">model1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+<span class="n">model1</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+
+<span class="n">diff_data</span> <span class="o">=</span> <span class="n">Data</span><span class="o">.</span><span class="n">n_order_difference_data</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">chart</span><span class="o">.</span><span class="n">n_order_difference_graph</span><span class="p">(</span><span class="n">diff_data</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">save_path</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="s1">&#39;First&#39;</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="n">chart</span><span class="o">.</span><span class="n">historocal_trend_line_chart</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">save_path</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
+<span class="n">chart</span><span class="o">.</span><span class="n">line_chart</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">test</span><span class="p">,</span> <span class="n">chart_title</span><span class="o">=</span><span class="s1">&#39;predict&#39;</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">save_path</span><span class="p">,</span> <span class="n">xlabel</span> <span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
+<span class="n">chart</span><span class="o">.</span><span class="n">lag_plot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+<span class="n">chart</span><span class="o">.</span><span class="n">ACF_chart</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">save_path</span><span class="p">,</span> <span class="n">lags</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">chart</span><span class="o">.</span><span class="n">forecast_result_chart_model</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">model1</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">save_path</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s1">&#39;AR(20)&#39;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
+<span class="n">chart</span><span class="o">.</span><span class="n">forecast_result_chart_predict</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">save_path</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s1">&#39;AR(1)&#39;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
+<span class="n">chart</span><span class="o">.</span><span class="n">statistics_infographic</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">save_path</span><span class="p">,</span> <span class="n">lags</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
+<span class="n">chart</span><span class="o">.</span><span class="n">forecast_result_group_chart</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="p">,</span> <span class="n">model_1</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">model_2</span><span class="o">=</span><span class="n">model1</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">save_path</span><span class="p">,</span> <span class="n">model_1_name</span><span class="o">=</span><span class="s1">&#39;AR(1)&#39;</span><span class="p">,</span> <span class="n">model_2_name</span><span class="o">=</span><span class="s1">&#39;AR(20)&#39;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt id="id0">
+<code class="sig-name descname">ACF_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.series.Series</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">lags</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Autocorrelation coefficient chart.</p>
+<p>Compare a time series data with itself. Bar graph. The number of deferral periods is on the x-axis, and ACF is on the y-axis
+The value range of the obtained autocorrelation value R is [-1,1], 1 is the maximum positive correlation
+value,-1 is the maximum negative correlation value, and 0 is irrelevant. After the drawing is completed, it will be saved to the specified path ‘file_path’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pandas.Series. 'data' is a one-dimensional numerical time series data of type'pandas.Series' taken from'pandas.DataFrame'.</em>) – </p></li>
+<li><p><strong>file_path</strong> (<em>string. Path to save image file.</em>) – </p></li>
+<li><p><strong>lags</strong> (<em>int</em><em>, </em><em>default  = 1. 'lags' represents the number of lagging periods. The default value is 1</em><em>, </em><em>which means the data is 1 period behind.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’data’ is an empty list. Check that the type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: ‘lags’ value must be a positive integer, and the condition is greater than 1 and less than the length of the data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len().</div>
+<div class="line">Solution:  Please do not enter ‘None’.Check that the type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id1">
+<code class="sig-name descname">forecast_result_chart_model</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">model: &lt;module 'TimeSeriesAnalysis.Model' from '/media/leodflag5/DATA/leodflag_code/TimesML_docstring/TimeSeriesAnalysis/Model.py'&gt;</em>, <em class="sig-param">file_path: str</em>, <em class="sig-param">model_name: str = 'model'</em>, <em class="sig-param">xlabel='date'</em>, <em class="sig-param">ylabel='price'</em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd><p>The overall prediction results of a model using the training set and the test set.</p>
+<p>The graph drawn by this function can display historical data, the prediction results of the training set
+and the test set at the same time, as well as the model measurement indicators, such as MSE, MAE, RMSE,
+NRMSE, and finally saved in the folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>model</strong> (<em>Model. The object type is TimeSeriesAnalysis.Model.</em>) – </p></li>
+<li><p><strong>file_path</strong> (<em>string. Path to save image file.</em>) – </p></li>
+<li><p><strong>model_name</strong> (<em>str</em><em>, </em><em>default  = &quot;model&quot;. The name of the model.</em>) – </p></li>
+<li><p><strong>xlabel</strong> (<em>str</em><em>, </em><em>default  = 'date'. The name of the x-axis.</em>) – </p></li>
+<li><p><strong>ylabel</strong> (<em>str</em><em>, </em><em>default  = 'price'. The name of the y-axis.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len().</div>
+<div class="line">Solution:  Please do not enter ‘None’.Check that the type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id2">
+<code class="sig-name descname">forecast_result_chart_predict</code><span class="sig-paren">(</span><em class="sig-param">model: &lt;module 'TimeSeriesAnalysis.Model' from '/media/leodflag5/DATA/leodflag_code/TimesML_docstring/TimeSeriesAnalysis/Model.py'&gt;</em>, <em class="sig-param">file_path: str</em>, <em class="sig-param">model_name: str = 'model'</em>, <em class="sig-param">xlabel='date'</em>, <em class="sig-param">ylabel='price'</em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forecast result graph.</p>
+<p>Input test data and predicted results are drawn as a line graph for comparison.After the drawing is completed, it will be saved to the specified path ‘file_path’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<em>Model. The object type is TimeSeriesAnalysis.Model.</em>) – </p></li>
+<li><p><strong>file_path</strong> (<em>string. Path to save image file.</em>) – </p></li>
+<li><p><strong>model_name</strong> (<em>str</em><em>, </em><em>default   = &quot;model&quot;. The name of the time series model.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data:  test_data=”, chack_test, “; predict_data=”, chack_pre.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_test’ is’True’, it means that ‘test_data’ does not need to be changed; if it is’False’, the input ‘test_data’ is changed to a one-dimensional list of numerical data. predict_data has the same judgment and processing method as test_data.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘listA’ or ‘listB’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id3">
+<code class="sig-name descname">forecast_result_group_chart</code><span class="sig-paren">(</span><em class="sig-param">train</em>, <em class="sig-param">test</em>, <em class="sig-param">model_1: &lt;module 'TimeSeriesAnalysis.Model' from '/media/leodflag5/DATA/leodflag_code/TimesML_docstring/TimeSeriesAnalysis/Model.py'&gt;</em>, <em class="sig-param">model_2: &lt;module 'TimeSeriesAnalysis.Model' from '/media/leodflag5/DATA/leodflag_code/TimesML_docstring/TimeSeriesAnalysis/Model.py'&gt;</em>, <em class="sig-param">file_path: str</em>, <em class="sig-param">model_1_name: str = 'model1'</em>, <em class="sig-param">model_2_name: str = 'model2'</em>, <em class="sig-param">xlabel: str = 'date'</em>, <em class="sig-param">ylabel: str = 'price'</em><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combine and compare the prediction results of the two models.</p>
+<p>The graph drawn by this function can visualize the data divided into the training set and the test set in the same historical data,
+the prediction results of the test sets of the two models, and the model measurement indicators, such as MSE, MAE, RMSE, NRMSE, finally saved in the folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train</strong> (<em>pandas.Series. 'train' is a one-dimensional numerical time series data of type'pandas.Series' taken from'pandas.DataFrame'.</em>) – </p></li>
+<li><p><strong>test</strong> (<em>pandas.Series. 'test' is a one-dimensional numerical time series data of type'pandas.Series' taken from'pandas.DataFrame'.</em>) – </p></li>
+<li><p><strong>model_1</strong> (<em>Model. The object type is TimeSeriesAnalysis.Model. The First model.</em>) – </p></li>
+<li><p><strong>model_2</strong> (<em>Model. The object type is TimeSeriesAnalysis.Model. The second model.</em>) – </p></li>
+<li><p><strong>file_path</strong> (<em>string. Path to save image file.</em>) – </p></li>
+<li><p><strong>model_1_name</strong> (<em>str</em><em>, </em><em>default  = &quot;model1&quot;. The name of the model_1.</em>) – </p></li>
+<li><p><strong>model_2_name</strong> (<em>str</em><em>, </em><em>default  = &quot;model2&quot;. The name of the model_2.</em>) – </p></li>
+<li><p><strong>xlabel</strong> (<em>str</em><em>, </em><em>default  = 'date'. The name of the x-axis.</em>) – </p></li>
+<li><p><strong>ylabel</strong> (<em>str</em><em>, </em><em>default  = 'price'. The name of the y-axis</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: train=”, chack_train, “, test=”, chack_test).</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_train’ is’True’, it means that ‘train’ does not need to be changed; if it is’False’, the input’train’ is changed to a one-dimensional list of numerical data.’test’ has the same judgment and processing method as ‘train’.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len()</div>
+<div class="line">Solution: ‘train’ or ‘test’ is None. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.forecast_result_group_model1_evaluation">
+<em class="property">property </em><code class="sig-name descname">forecast_result_group_model1_evaluation</code><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.forecast_result_group_model1_evaluation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return model1 mse、mae、rmse、nrmse.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.forecast_result_group_model2_evaluation">
+<em class="property">property </em><code class="sig-name descname">forecast_result_group_model2_evaluation</code><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.forecast_result_group_model2_evaluation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return model2 mse、mae、rmse、nrmse.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id4">
+<code class="sig-name descname">historocal_trend_line_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw historical trend line chart with time series data. After the drawing is completed,
+it will be saved to the specified path ‘file_path’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>file_path</strong> (<em>string. Path to save image file.</em>) – </p></li>
+<li><p><strong>xlabel</strong> (<em>str</em><em>, </em><em>default  = 'date'. The name of the x-axis.</em>) – </p></li>
+<li><p><strong>ylabel</strong> (<em>str</em><em>, </em><em>default  = 'price'. The name of the y-axis.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: (‘List content must be one numerical data: data=’, False)</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_data’ is’True’, it means that ‘data’ does not need to be changed; if it is’False’, the input ‘data’ is changed to a one-dimensional list of numerical data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’listA’ is an empty list. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+<div class="line-block">
+<div class="line">KeyError: “The’data’ type is’pandas.DataFrame’, please enter the correct key value.”</div>
+<div class="line">Solution: Use the correct key value to obtain data.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id5">
+<code class="sig-name descname">lag_plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.series.Series</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scatter plot of lagging periods.</p>
+<p>The current time series data and the previous time series data are drawn into a scatter diagram to determine the linear relationship.
+Current data is the x-axis, previous data is the y-axis.After the drawing is completed, it will be saved to the specified path ‘file_path’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pandas.Series. 'data' is a one-dimensional numerical time series data of type'pandas.Series' taken from'pandas.DataFrame'.</em>) – </p></li>
+<li><p><strong>file_path</strong> (<em>string. Path to save image file.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’data’ is an empty list. Check that the type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: ‘lags’ value must be a positive integer, and the condition is greater than 1 and less than the length of the data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len().</div>
+<div class="line">Solution:  Please do not enter ‘None’.Check that the type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Chart.chart.lag_plot_R">
+<em class="property">property </em><code class="sig-name descname">lag_plot_R</code><a class="headerlink" href="#TimeSeriesAnalysis.Chart.chart.lag_plot_R" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return correlation coefficient.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id6">
+<code class="sig-name descname">line_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">predict_data</span></em>, <em class="sig-param"><span class="n">chart_title</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Throw in two lists of one-dimensional numbers and draw a line chart, it will be saved to the specified path ‘file_path’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>predict_data</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>chart_title</strong> (<em>string. Chart title.</em>) – </p></li>
+<li><p><strong>file_path</strong> (<em>string. Path to save image file.</em>) – </p></li>
+<li><p><strong>xlabel</strong> (<em>str</em><em>, </em><em>default  = 'date'. The name of the x-axis.</em>) – </p></li>
+<li><p><strong>ylabel</strong> (<em>str</em><em>, </em><em>default  = 'price'. The name of the y-axis.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: (‘List content must be one numerical data: data=’, False)</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_data’ is’True’, it means that ‘data’ does not need to be changed; if it is’False’, the input ‘data’ is changed to a one-dimensional list of numerical data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’listA’ is an empty list. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+<div class="line-block">
+<div class="line">KeyError: “The’data’ type is’pandas.DataFrame’, please enter the correct key value.”</div>
+<div class="line">Solution: Use the correct key value to obtain data.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id7">
+<code class="sig-name descname">n_order_difference_graph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">periods</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'First'</span></em>, <em class="sig-param"><span class="n">log</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw n-order difference graph  with time series data.</p>
+<p>For example, First-order difference graph or Second-order difference graph. After the drawing is completed, it will be saved to the specified path ‘file_path’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>file_path</strong> (<em>string. Path to save image file.</em>) – </p></li>
+<li><p><strong>periods</strong> (<em>str</em><em>, </em><em>default  = 'First'. Differential period.</em>) – </p></li>
+<li><p><strong>log</strong> (<em>bool</em><em>, </em><em>default  = False. The data multiplied by the natural logarithm. True</em><em> or </em><em>False.</em>) – </p></li>
+<li><p><strong>xlabel</strong> (<em>str</em><em>, </em><em>default  = 'date'. The name of the x-axis.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: (‘List content must be one numerical data: data=’, False)</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_data’ is’True’, it means that ‘data’ does not need to be changed; if it is’False’, the input ‘data’ is changed to a one-dimensional list of numerical data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’listA’ is an empty list. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+<div class="line-block">
+<div class="line">KeyError: “The’data’ type is’pandas.DataFrame’, please enter the correct key value.”</div>
+<div class="line">Solution: Use the correct key value to obtain data.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id8">
+<code class="sig-name descname">statistics_infographic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.series.Series</span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">lags</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'date'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'price'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
+<dd><p>Statistical graphs of time series data.</p>
+<p>Three statistical graphs combined into one graph: historocal trend line chart、lag plot、ACF chart.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pandas.Series. 'data' is a one-dimensional numerical time series data of type'pandas.Series' taken from'pandas.DataFrame'.</em>) – </p></li>
+<li><p><strong>file_path</strong> (<em>string. Path to save image file.</em>) – </p></li>
+<li><p><strong>lags</strong> (<em>int</em><em>, </em><em>default  = 1. 'lags' represents the number of lagging periods. The default value is 1</em><em>, </em><em>which means the data is 1 period behind.</em>) – </p></li>
+<li><p><strong>xlabel</strong> (<em>str</em><em>, </em><em>default  = 'date'. The name of the x-axis for historocal trend line chart.</em>) – </p></li>
+<li><p><strong>ylabel</strong> (<em>str</em><em>, </em><em>default  = 'price'. The name of the y-axis for historocal trend line chart.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The entered’data’ is an empty list. Check that the type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: ‘lags’ value must be a positive integer, and the condition is greater than 1 and less than the length of the data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len().</div>
+<div class="line">Solution:  Please do not enter ‘None’.Check that the type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-TimeSeriesAnalysis.Model">
+<span id="timeseriesanalysis-model-module"></span><h2>TimeSeriesAnalysis.Model module<a class="headerlink" href="#module-TimeSeriesAnalysis.Model" title="Permalink to this headline">¶</a></h2>
+<p>This module contains time series models for forecasting.</p>
+<p>Time series prediction models include autoregressive models and moving average models, which can be used for
+model training and model prediction, and model parameters such as prediction results and prediction errors can be
+obtained through the created objects.</p>
+<div class="section" id="class-1">
+<h3>Class 1<a class="headerlink" href="#class-1" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>AutoRegressive</dt><dd><p>Autoregressive is a time series model.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.fit">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.Model.</code><code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">train_data</span><span class="p">:</span> <span class="n">pandas.Series</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Model.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit autoregression model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.predict">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.Model.</code><code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">test_data</span><span class="p">:</span> <span class="n">pandas.Series</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#TimeSeriesAnalysis.Model.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use an autoregressive model to make predictions.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="class-2">
+<h3>Class 2<a class="headerlink" href="#class-2" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>SimpleMovingAverage</dt><dd><p>Simple moving average is often used in the financial field..</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="id9">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.Model.</code><code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">train_data</span><span class="p">:</span> <span class="n">pandas.Series</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit simple moving average.</p>
+</dd></dl>
+
+<p class="rubric">Notes</p>
+<p>The input data format must be’pandas.Series’.</p>
+<p>If the time series data type is a list, you can use the function “list_to_dataframe” of the module “ProcessData” to convert the data type.</p>
+<p>It is recommended to use the function of’ProcessData’ to obtain and process time series data, which is less prone to errors when entering the model.</p>
+<dl class="py class">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive">
+<em class="property">class </em><code class="sig-prename descclassname">TimeSeriesAnalysis.Model.</code><code class="sig-name descname">AutoRegressive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lags</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Autoregressive is a time series model.</p>
+<p>Autoregressive is a time series model. The model uses past data in the time series as its own explanatory variable, so it will be affected by current errors and past data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lags</strong> (<em>int</em><em>, </em><em>default = 1. Number of lagging periods. Decide to use the data of the previous periods as the explanatory variable. The default value is 1</em><em>, </em><em>which means that only the data from the previous period is used as the explanatory variable</em><em>, </em><em>which is called the first order autoregressive model</em><em> (</em><em>AR</em><em>(</em><em>1</em><em>)</em><em>)</em><em></em>) – </p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.__data">
+<code class="sig-name descname">__data</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.__data" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">For</span> <span class="n">example</span><span class="p">,</span>
+<span class="n">date</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">23</span> <span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.89</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">24</span> <span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.91</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">29</span> <span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.87</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">30</span> <span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.92</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">01</span> <span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.79</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">close</span><span class="p">,</span> <span class="n">Length</span><span class="p">:</span> <span class="mi">170</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>pandas.Series. One-dimensional time series data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.__ar_lags_data">
+<code class="sig-name descname">__ar_lags_data</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.__ar_lags_data" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">For</span> <span class="n">example</span> <span class="n">AR</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">data</span> <span class="nb">set</span><span class="p">:</span>
+<span class="n">date</span>　　　　　　　　<span class="n">t</span><span class="o">-</span><span class="mi">1</span>　　<span class="n">t</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">29</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>  <span class="mf">29.10</span>  <span class="mf">28.89</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">30</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>  <span class="mf">28.89</span>  <span class="mf">28.91</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">01</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>  <span class="mf">28.91</span>  <span class="mf">28.87</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">04</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>  <span class="mf">28.87</span>  <span class="mf">28.92</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">06</span> <span class="mi">13</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">21</span>  <span class="mf">28.92</span>  <span class="mf">28.79</span>
+<span class="o">-------------------------------------------------------------------------------</span>
+<span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="n">Current</span> <span class="n">time</span> <span class="n">series</span> <span class="n">data</span>
+<span class="s1">&#39;t-1&#39;</span><span class="p">,</span> <span class="n">Previous</span> <span class="n">time</span> <span class="n">series</span> <span class="n">data</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>pandas.DataFrame. Autoregressive data set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.__ar_test_data">
+<code class="sig-name descname">__ar_test_data</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.__ar_test_data" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>pandas.DataFrame. Autoregressive data set when using ‘predict’ function.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.__ar_coef_matrix">
+<code class="sig-name descname">__ar_coef_matrix</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.__ar_coef_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>numpy.ndarray. Multidimensional linear regression matrix normal equation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.__ar_train_predict">
+<code class="sig-name descname">__ar_train_predict</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.__ar_train_predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float. The error between the current period and the previous period.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.__ar_train_error">
+<code class="sig-name descname">__ar_train_error</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.__ar_train_error" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list. Time series forecast results of autoregressive model. The order is [mse, mae, rmse, nrmse]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id10">
+<code class="sig-name descname">__ar_test_data</code><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list. Time series forecast results of autoregressive model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.__ar_test_predict">
+<code class="sig-name descname">__ar_test_predict</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.__ar_test_predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list. Time series forecast results of autoregressive model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.__ar_test_error">
+<code class="sig-name descname">__ar_test_error</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.__ar_test_error" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float. The mean square error predicted by the autoregressive model. The order is [mse, mae, rmse, nrmse]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.__ar_train_r_2">
+<code class="sig-name descname">__ar_train_r_2</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.__ar_train_r_2" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float. The train coefficient of determination .</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.__ar_test_r_2">
+<code class="sig-name descname">__ar_test_r_2</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.__ar_test_r_2" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float. The test coefficient of determination .</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">lags -&gt; int</code></dt>
+<dd><p>Return the number of lagging periods</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">ar_lags_data -&gt; pandas.DataFrame:</code></dt>
+<dd><p>Return autoregressive model data of lagging periods.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">test_data -&gt; pandas.Series</code></dt>
+<dd><p>Return data used for testing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">coefficients_matrix -&gt; numpy.ndarray</code></dt>
+<dd><p>Return the autoregressive model coefficients matrix.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">train_predict -&gt; pandas.Series</code></dt>
+<dd><p>Return the results predicted by the autoregressive model using the training set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">test_predict -&gt; pandas.Series</code></dt>
+<dd><p>Return the results predicted by the autoregressive model using the testing set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">train_error -&gt; list</code></dt>
+<dd><p>Return the regression index used to calculate the training prediction error. The order is [mse, mae, rmse, nrmse].</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">test_error -&gt; list</code></dt>
+<dd><p>Return the regression index used to calculate the testing prediction error. The order is [mse, mae, rmse, nrmse].</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">ar_train_r_2 -&gt; float</code></dt>
+<dd><p>Return train coefficient of determination .</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">ar_test_r_2 -&gt; float</code></dt>
+<dd><p>Return test coefficient of determination .</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">train_data</span><span class="p">:</span> <span class="n">pandas.Series</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit autoregression model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">test_data</span><span class="p">:</span> <span class="n">pandas.Series</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use an autoregressive model to make predictions.</p>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">TimeSeriesAnalysis.ProcessData</span> <span class="k">as</span> <span class="nn">Data</span>
+<span class="kn">import</span> <span class="nn">TimeSeriesAnalysis.Chart</span> <span class="k">as</span> <span class="nn">Chart</span>
+<span class="kn">import</span> <span class="nn">TimeSeriesAnalysis.Model</span> <span class="k">as</span> <span class="nn">Model</span>
+<span class="kn">import</span> <span class="nn">Math.Statistics</span> <span class="k">as</span> <span class="nn">math</span>
+
+<span class="n">col_name</span> <span class="o">=</span> <span class="s1">&#39;US&#39;</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;test_data/g20_new_c.csv&#39;</span>
+<span class="n">times_data_id</span> <span class="o">=</span> <span class="s1">&#39;US&#39;</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="s1">&#39;US&#39;</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">col_name</span><span class="p">)</span>
+<span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">Data</span><span class="o">.</span><span class="n">split_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)</span>
+
+<span class="n">model1</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">AutoRegressive</span><span class="p">(</span><span class="n">lags</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">model1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+<span class="n">model1</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model1</span><span class="o">.</span><span class="n">coefficients_matrix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model1</span><span class="o">.</span><span class="n">ar_lags_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model1</span><span class="o">.</span><span class="n">lags</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model1</span><span class="o">.</span><span class="n">test_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model1</span><span class="o">.</span><span class="n">test_error</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model1</span><span class="o">.</span><span class="n">test_predict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model1</span><span class="o">.</span><span class="n">train_error</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model1</span><span class="o">.</span><span class="n">train_predict</span><span class="p">)</span>
+
+<span class="n">model2</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">SimpleMovingAverage</span><span class="p">(</span><span class="n">windows</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">model2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model2</span><span class="o">.</span><span class="n">sma_result</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model2</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<p>Autoregressive model: <a class="reference external" href="https://en.wikipedia.org/wiki/Autoregressive_model">https://en.wikipedia.org/wiki/Autoregressive_model</a></p>
+<p>Least Squares Estimation of the Parameters: <a class="reference external" href="https://slideplayer.com/slide/4238175/14/images/12/12-1+Multiple+Linear+Regression+Models.jpg">https://slideplayer.com/slide/4238175/14/images/12/12-1+Multiple+Linear+Regression+Models.jpg</a></p>
+<p>Matrix Approach to Multiple Linear Regression: <a class="reference external" href="https://slideplayer.com/slide/4238175/14/images/20/12-1+Multiple+Linear+Regression+Models.jpg">https://slideplayer.com/slide/4238175/14/images/20/12-1+Multiple+Linear+Regression+Models.jpg</a></p>
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.ar_lags_data">
+<em class="property">property </em><code class="sig-name descname">ar_lags_data</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.ar_lags_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return autoregressive model data of lagging periods.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.ar_test_r_2">
+<em class="property">property </em><code class="sig-name descname">ar_test_r_2</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.ar_test_r_2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return test coefficient of determination .</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.ar_train_r_2">
+<em class="property">property </em><code class="sig-name descname">ar_train_r_2</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.ar_train_r_2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return train coefficient of determination .</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.coefficients_matrix">
+<em class="property">property </em><code class="sig-name descname">coefficients_matrix</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.coefficients_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the autoregressive model coefficients matrix.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id11">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">train_data</span><span class="p">:</span> <span class="n">pandas.core.series.Series</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id11" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit autoregression model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>train_data</strong> (<em>pandas.Series. Data for training the autoregression model.'train_data' is a one-dimensional numerical data of type'pandas.Series' taken from'pandas.DataFrame'.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: ‘lags’ value must be a positive integer, and the condition is greater than 1 and less than the length of the data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len().</div>
+<div class="line">Solution:  Please do not enter ‘None’. The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+<div class="line-block">
+<div class="line">KeyError: The ‘train_data’ type is’pandas.DataFrame’, please enter the correct key value.</div>
+<div class="line">Solution: Use the correct key value to obtain data.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.lags">
+<em class="property">property </em><code class="sig-name descname">lags</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.lags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of lagging periods.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id12">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">test_data</span><span class="p">:</span> <span class="n">pandas.core.series.Series</span></em>, <em class="sig-param"><span class="n">pure_test_set_predict</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.series.Series<a class="headerlink" href="#id12" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use an autoregressive model to make predictions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test_data</strong> (<em>pandas.Series. Data for testing the autoregression model.'test_data' is a one-dimensional numerical data of type'pandas.Series' taken from'pandas.DataFrame'.</em>) – </p></li>
+<li><p><strong>pure_test_set_predict</strong> (<em>bool</em><em>, </em><em>default = True. The autoregressive model consumes data with a length of 'lags' when predicting. 'pure_test_set_predict' default is true</em><em>, </em><em>which means that only the data of the test set is used for prediction</em><em>, </em><em>so the predicted result will be less than the number of'lags' data.  If the setting is false</em><em>, </em><em>the end data of the training set will be used as the starting point of the test set prediction</em><em>, </em><em>so the predicted data length will be the same as the test set data length. If 'pure_test_set_predict' is false</em><em>, </em><em>the end data of the training set will be used as the starting point of the test set prediction</em><em>, </em><em>so the predicted data length will be the same as the test set data length.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len().</div>
+<div class="line">Solution:  Please do not enter ‘None’. The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+<div class="line-block">
+<div class="line">KeyError: The ‘test_data’ type is’pandas.DataFrame’, please enter the correct key value.</div>
+<div class="line">Solution: Use the correct key value to obtain data.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.test_data">
+<em class="property">property </em><code class="sig-name descname">test_data</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.test_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return data used for testing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.test_error">
+<em class="property">property </em><code class="sig-name descname">test_error</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.test_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the regression index used to calculate the testing prediction error. The order is [mse, mae, rmse, nrmse].</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.test_predict">
+<em class="property">property </em><code class="sig-name descname">test_predict</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.test_predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the results predicted by the autoregressive model using the testing set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.train_error">
+<em class="property">property </em><code class="sig-name descname">train_error</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.train_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the regression index used to calculate the training prediction error. The order is [mse, mae, rmse, nrmse].</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.AutoRegressive.train_predict">
+<em class="property">property </em><code class="sig-name descname">train_predict</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.AutoRegressive.train_predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the results predicted by the autoregressive model using the training set.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="TimeSeriesAnalysis.Model.SimpleMovingAverage">
+<em class="property">class </em><code class="sig-prename descclassname">TimeSeriesAnalysis.Model.</code><code class="sig-name descname">SimpleMovingAverage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">windows</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">5</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Model.SimpleMovingAverage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Simple moving average is often used in the financial field.</p>
+<p>The calculation method is to calculate the average after adding n previous data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>windows</strong> (<em>int</em><em>, </em><em>default = 5. Number of lagging periods. Decided to use data from previous periods as explanatory variables. The default value is 5</em><em>, </em><em>which means that only the data of the previous period is used as an explanatory variable</em><em>, </em><em>which is called the simple moving average</em><em> (</em><em>SMA</em><em>(</em><em>5</em><em>)</em><em>)</em><em></em>) – </p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.SimpleMovingAverage.__data">
+<code class="sig-name descname">__data</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.SimpleMovingAverage.__data" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">For</span> <span class="n">example</span><span class="p">,</span>
+<span class="n">date</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">23</span> <span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.89</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">24</span> <span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.91</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">29</span> <span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.87</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">30</span> <span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.92</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">01</span> <span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.79</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">close</span><span class="p">,</span> <span class="n">Length</span><span class="p">:</span> <span class="mi">170</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>pandas.Series. One-dimensional time series data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.SimpleMovingAverage.__windows">
+<code class="sig-name descname">__windows</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.SimpleMovingAverage.__windows" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int, default = 5. Determine the number of windows containing n lag periods.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="TimeSeriesAnalysis.Model.SimpleMovingAverage.__sma_data">
+<code class="sig-name descname">__sma_data</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.SimpleMovingAverage.__sma_data" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">For</span> <span class="n">example</span><span class="p">,</span>
+<span class="n">date</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">29</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">29.10</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">30</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.89</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">01</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.91</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">04</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>    <span class="mf">28.87</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">06</span> <span class="mi">13</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">21</span>    <span class="mf">28.92</span>
+<span class="n">Name</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>One-dimensional array. Simple moving average data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">data -&gt; pandas.Series:</code></dt>
+<dd><p>Return the one-dimensional time series data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">sma_result -&gt; pandas.Series</code></dt>
+<dd><p>Return the result of a one-dimensional number list after simple moving average calculation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.SimpleMovingAverage.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">train_data</span><span class="p">:</span> <span class="n">pandas.Series</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.Model.SimpleMovingAverage.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit simple moving average.</p>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">TimeSeriesAnalysis.ProcessData</span> <span class="k">as</span> <span class="nn">Data</span>
+<span class="kn">import</span> <span class="nn">TimeSeriesAnalysis.Model</span> <span class="k">as</span> <span class="nn">model</span>
+
+<span class="n">col_name</span> <span class="o">=</span> <span class="s1">&#39;close&#39;</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;Stock.csv&#39;</span>
+<span class="n">times_data_id</span> <span class="o">=</span> <span class="s1">&#39;Stock.TW&#39;</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">col_name</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">SimpleMovingAverage</span><span class="p">(</span><span class="n">windows</span><span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">sma_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<p>Simple moving average: <a class="reference external" href="https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average">https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average</a></p>
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.SimpleMovingAverage.data">
+<em class="property">property </em><code class="sig-name descname">data</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.SimpleMovingAverage.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the one-dimensional time series data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id13">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.series.Series</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id13" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit simple moving average.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>pandas.Series. Calculate simple moving average.'data' is a one-dimensional numerical data of type'pandas.Series' taken from'pandas.DataFrame'.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The list must be one-dimensional numerical data, and there is at least one numerical data in it.</div>
+<div class="line">Solution: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: ‘windows’ &gt; 2 and ‘windows’ &lt;= data.lenght</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len().</div>
+<div class="line">Solution:  Please do not enter ‘None’. The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+<div class="line-block">
+<div class="line">KeyError: The ‘train_data’ type is’pandas.DataFrame’, please enter the correct key value.</div>
+<div class="line">Solution: Use the correct key value to obtain data.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="TimeSeriesAnalysis.Model.SimpleMovingAverage.sma_result">
+<em class="property">property </em><code class="sig-name descname">sma_result</code><a class="headerlink" href="#TimeSeriesAnalysis.Model.SimpleMovingAverage.sma_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the result of a one-dimensional number list after simple moving average calculation.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-TimeSeriesAnalysis.ProcessData">
+<span id="timeseriesanalysis-processdata-module"></span><h2>TimeSeriesAnalysis.ProcessData module<a class="headerlink" href="#module-TimeSeriesAnalysis.ProcessData" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the access and processing methods of time series data.</p>
+<p>Ways to obtain time series data: read files and download from websites.
+The data processing method is archiving, the two formats are interchanged,
+the data is divided, and the time series model data set is established.</p>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>read_file(path: str, col_name: str=’close’) -&gt; pandas.Series</dt><dd><p>Read file to get time series data.</p>
+</dd>
+<dt>get_data_yahoo(stock_id: str, start_period: str, end_period: str, file_format: str=’csv’, frequency: str = ‘day’)</dt><dd><p>Crawl and archive the stock price data of finance.yahoo.com.</p>
+</dd>
+<dt>save_flie(data, path: str, stock_id: str = ‘stock’, file_format: str = ‘csv’)</dt><dd><p>Save data as file.</p>
+</dd>
+<dt>create_sequence_list(data) -&gt; list</dt><dd><p>Create a sequence starting from 1.</p>
+</dd>
+<dt>list_to_dataframe(data: list) -&gt; pandas.DataFrame</dt><dd><p>Convert the ‘list’ type of the one-dimensional list of values to the ‘DataFrame’ type.</p>
+</dd>
+<dt>dataframe_to_list(data: pandas.Series) -&gt; list</dt><dd><p>Convert the ‘pandas.Series’ type of the one-dimensional list of values to the’list’ type.</p>
+</dd>
+<dt>split_data(data, ratio: float)</dt><dd><p>Split the data into two data sets according to the input ratio.</p>
+</dd>
+<dt>create_ar_data(data: pandas.Series, lags: int = 1) -&gt; pandas.DataFrame</dt><dd><p>Create an autoregressive data set.</p>
+</dd>
+<dt>n_order_difference_data(data: pandas.Series, periods: int = 1, log: bool = False) -&gt; pandas.Series:</dt><dd><p>Sequence of numbers after difference operation.</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>If the time series data type is a list, you can use the function “list_to_dataframe” of the module “TimeSeriesAnalysis.ProcessData” to convert the data type.</p>
+<dl class="py function">
+<dt id="TimeSeriesAnalysis.ProcessData.create_ar_data">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.ProcessData.</code><code class="sig-name descname">create_ar_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.series.Series</span></em>, <em class="sig-param"><span class="n">lags</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#TimeSeriesAnalysis.ProcessData.create_ar_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an autoregressive data set.</p>
+<p>The autoregressive data set created to facilitate the calculation of autoregressive, its type is’pandas.DataFrame’.</p>
+<dl>
+<dt>For example AR(1) data set:</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">date</span>　　　　　　　　<span class="n">t</span><span class="o">-</span><span class="mi">1</span>　　<span class="n">t</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">29</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>  <span class="mf">29.10</span>  <span class="mf">28.89</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">30</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>  <span class="mf">28.89</span>  <span class="mf">28.91</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">01</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>  <span class="mf">28.91</span>  <span class="mf">28.87</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">04</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>  <span class="mf">28.87</span>  <span class="mf">28.92</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">06</span> <span class="mi">13</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">21</span>  <span class="mf">28.92</span>  <span class="mf">28.79</span>
+<span class="o">-------------------------------------------------------------------------------</span>
+<span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="n">Current</span> <span class="n">time</span> <span class="n">series</span> <span class="n">data</span>
+<span class="s1">&#39;t-1&#39;</span><span class="p">,</span> <span class="n">Previous</span> <span class="n">time</span> <span class="n">series</span> <span class="n">data</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pandas.Series. data' is a one-dimensional numerical data of type 'pandas.Series' taken from 'pandas.DataFrame'.</em>) – </p></li>
+<li><p><strong>lags</strong> (<em>int</em><em> , </em><em>default =  1. 'lags' represents the number of lagging periods. The default value is 1</em><em>, </em><em>which means the data is 1 period behind.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame. The autoregressive data set created to facilitate the calculation of autoregressive.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: Check that the input list is a one-dimensional numerical data.</div>
+<div class="line">Solution: ‘data’ is one-dimensional data and the type is’pandas.Series’, but the content is not all numeric.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: ‘lags’ value must be a positive integer, and the condition is greater than 1 and less than the length of the data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len().</div>
+<div class="line">Solution:  Please do not enter ‘None’.Check that the type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+<div class="line-block">
+<div class="line">KeyError: The ‘data’ type is’pandas.DataFrame’, please enter the correct key value.</div>
+<div class="line">Solution: Use the correct key value to obtain data.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="TimeSeriesAnalysis.ProcessData.create_sequence_list">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.ProcessData.</code><code class="sig-name descname">create_sequence_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#TimeSeriesAnalysis.ProcessData.create_sequence_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a sequence starting from 1.</p>
+<p>This function uses the length of the input one-dimensional numerical list to create a sequence starting from 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list. Return a sequence list with the same length as ‘data’.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: List content must be one-dimensional numerical data: chack_data=”,chack_data.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If’chack_data’ is’True’, it means that ‘data’ does not need to be changed; if it is’False’, the input ‘data’ is changed to a one-dimensional list of numerical data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: ‘data’ must be one-dimensional numerical list.</div>
+<div class="line">Solution: Check that the input ‘data’ is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="TimeSeriesAnalysis.ProcessData.dataframe_to_list">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.ProcessData.</code><code class="sig-name descname">dataframe_to_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.series.Series</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#TimeSeriesAnalysis.ProcessData.dataframe_to_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the ‘pandas.Series’ type of the one-dimensional list of values to the’list’ type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>pandas.Series. 'data' is a one-dimensional numerical data of type'pandas.Series' taken from'pandas.DataFrame'.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list. One-dimensional numerical list.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: List content must be one numerical data: chack_data=”, chack_data.</div>
+<div class="line">Solution: ‘True’, one-dimensional numerical list. For example,[1,5,8,6,3].    ‘False’, two-dimensional lists, strings, and one-dimensional non-numerical lists.For example, [[3, 6], [7, 2, 9, 5]] , ‘5’ ,  [3, 6, 7, ‘2’, 9, 5] . If ‘chack_data’ is ‘True’, it means that ‘data’ does not need to be changed; if it is’False’, the input ‘data’ is changed to a one-dimensional list of numerical data.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+<div class="line">Solution: Input ‘data’ must be a one-dimensional numerical data of type’pandas.Series’ taken from’pandas.DataFrame’.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="TimeSeriesAnalysis.ProcessData.get_data_yahoo">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.ProcessData.</code><code class="sig-name descname">get_data_yahoo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stock_id</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">start_period</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">end_period</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">file_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'csv'</span></em>, <em class="sig-param"><span class="n">frequency</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'day'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.ProcessData.get_data_yahoo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crawl and archive the stock price data of finance.yahoo.com.</p>
+<p>This function can crawl the stock market price data at a specified time and frequency and save it as a csv or txt file, and the returned
+data type is pandas.Series.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stock_id</strong> (<em>string. Enter the stock ID. For example</em><em>, </em><em>Taiwan stock&quot; 2206.TW&quot;; US stock &quot;SWKS&quot;.</em>) – </p></li>
+<li><p><strong>start_period</strong> (<em>string. The start time of the time period for crawling stock prices. For example</em><em>, </em><em>&quot;2019 7 12&quot;</em><em>, </em><em>&quot;2019</em><em>, </em><em>7</em><em>, </em><em>12&quot;</em><em>, </em><em>&quot;2019 7&quot;</em><em>, </em><em>&quot;2019</em><em>, </em><em>7&quot;</em><em>, </em><em>&quot;2019&quot;</em><em>,  </em><em>&quot;7 21 2019&quot;</em><em>, </em><em>&quot;7</em><em>, </em><em>21</em><em>, </em><em>2019&quot;</em><em>, </em><em>&quot; 7 2019&quot;</em><em>,</em><em>&quot;7</em><em>, </em><em>2019&quot;.</em>) – </p></li>
+<li><p><strong>end_period</strong> (<em>string. The start time of the time period for crawling stock prices. For example</em><em>, </em><em>&quot;2019 8 12&quot;</em><em>, </em><em>&quot;2019</em><em>, </em><em>8</em><em>, </em><em>12&quot;</em><em>, </em><em>&quot;2019 8&quot;</em><em>, </em><em>&quot;2019</em><em>, </em><em>8&quot;</em><em>, </em><em>&quot;2019&quot;</em><em>,  </em><em>&quot;8 21 2019&quot;</em><em>, </em><em>&quot;8</em><em>, </em><em>21</em><em>, </em><em>2019&quot;</em><em>, </em><em>&quot; 8 2019&quot;</em><em>,</em><em>&quot;8</em><em>, </em><em>2019&quot;.</em>) – </p></li>
+<li><p><strong>file_format</strong> (<em>string</em><em>, </em><em>default = 'csv'. Archive the crawled stock market price data</em><em>, </em><em>file format is 'csv'</em><em> or </em><em>'txt'.  For example</em><em>, </em><em>'csv'</em><em> ,</em><em>'CSV'</em><em> , </em><em>'txt'</em><em>, </em><em>'TXT'.</em>) – </p></li>
+<li><p><strong>frequency</strong> (<em>string</em><em>, </em><em>default = 'day'. The frequency of stock market price data is daily</em><em>, </em><em>weekly</em><em>, </em><em>and monthly. For example</em><em>, </em><em>'daily'</em><em>, </em><em>'day'</em><em>, </em><em>'weekly'</em><em>, </em><em>'week'</em><em>, </em><em>'monthly'</em><em>, </em><em>'month'.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: ‘start_period’ must be earlier than ‘end_period’.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description. For example, start_period = ‘2020, 2, 5’,  end_period = ‘2020, 4, 5’.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: Not found stock id.</div>
+<div class="line">Solution: Enter the correct stock id.</div>
+</div>
+<div class="line-block">
+<div class="line">ConnectionError: Internet connection error.</div>
+<div class="line">Solution: Confirm that the network is connected.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="TimeSeriesAnalysis.ProcessData.list_to_dataframe">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.ProcessData.</code><code class="sig-name descname">list_to_dataframe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#TimeSeriesAnalysis.ProcessData.list_to_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the ‘list’ type of the one-dimensional list of values to the ‘DataFrame’ type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list. One-dimensional numerical list. For example</em><em>, </em><em>[</em><em>1</em><em>,</em><em>5</em><em>,</em><em>8</em><em>,</em><em>6</em><em>,</em><em>3</em><em>]</em><em></em>) – </p></li>
+<li><p><strong>index</strong> (<em>pandas.Index</em><em>, </em><em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional list.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame. The one-dimensional list of values to the ‘DataFrame’ type.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: ‘data’ must be one-dimensional numerical list.</div>
+<div class="line">Solution: ‘data’ contains a string or is two-dimensional list. Check that the input list is a one-dimensional list, for example, [1,5,8,6,3].</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: The two lists must be the same length.</div>
+<div class="line">Solution: Make sure that the number of numerical data in the two lists is the same (the same length).</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="TimeSeriesAnalysis.ProcessData.n_order_difference_data">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.ProcessData.</code><code class="sig-name descname">n_order_difference_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.series.Series</span></em>, <em class="sig-param"><span class="n">periods</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">log</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.series.Series<a class="headerlink" href="#TimeSeriesAnalysis.ProcessData.n_order_difference_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequence of numbers after difference operation.</p>
+<p>The difference between the current period and the lag period data is called the first-order difference.
+The difference the data a second time is called the second-order difference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pandas.Series. 'data' is a one-dimensional numerical data of type 'pandas.Series' taken from 'pandas.DataFrame'.</em>) – </p></li>
+<li><p><strong>periods</strong> (<em>int</em><em> , </em><em>default =  1. 'periods' represents the number of lagging periods. The default value is 1</em><em>, </em><em>which means the data is 1 period behind.</em>) – </p></li>
+<li><p><strong>log</strong> (<em>bool</em><em>, </em><em>default  = False. Does the data need to be multiplied by the natural logarithm.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.Series. Return the difference data.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">ValueError: The type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: Check that the input list is a one-dimensional numerical data.</div>
+<div class="line">Solution: ‘data’ is one-dimensional data and the type is’pandas.Series’, but the content is not all numeric.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: ‘periods’ value must be a positive integer, and the condition is greater than 1 and less than the length of the data.</div>
+<div class="line">Solution: Check whether the parameter matches the ‘ValueError’ description, or use the default value.</div>
+</div>
+<div class="line-block">
+<div class="line">TypeError: object of type ‘NoneType’ has no len().</div>
+<div class="line">Solution:  Please do not enter ‘None’.Check that the type of one-dimensional data must be ‘pandas.Series’, and the content is numeric data.</div>
+</div>
+<div class="line-block">
+<div class="line">KeyError: The ‘data’ type is’pandas.DataFrame’, please enter the correct key value.</div>
+<div class="line">Solution: Use the correct key value to obtain data.</div>
+</div>
+</div>
+<p class="rubric">References</p>
+<p>Stationarity and differencing: <a class="reference external" href="https://otexts.com/fpp2/stationarity.html">https://otexts.com/fpp2/stationarity.html</a></p>
+<p>Time series analysis ppt: <a class="reference external" href="http://homepage.ntu.edu.tw/~sschen/Book/Slides/Ch2Basic.pdf">http://homepage.ntu.edu.tw/~sschen/Book/Slides/Ch2Basic.pdf</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="TimeSeriesAnalysis.ProcessData.read_file">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.ProcessData.</code><code class="sig-name descname">read_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">col_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'close'</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.series.Series<a class="headerlink" href="#TimeSeriesAnalysis.ProcessData.read_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read file to get time series data.</p>
+<p>The file formats that can be read by this function are csv and txt, and the returned data type is pandas.Series.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>string. Enter the absolute path</em><em> or </em><em>relative path where the file is located. The file formats that can be read are csv and txt.</em>) – </p></li>
+<li><p><strong>col_name</strong> (<em>string</em><em> , </em><em>default = 'close'. The text of the file must contain column names.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.Series. Return a list with date as the column index value, the data type is float.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">FileNotFoundError: [Errno 2] There is no such file or directory: ‘wrong path’.</div>
+<div class="line">Solution: Enter the correct file path and the correct file name.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: Invalid file path or buffer object type: &lt;class ‘int’&gt;</div>
+<div class="line">Solution: Enter the correct file path and the correct file name.</div>
+</div>
+<div class="line-block">
+<div class="line">KeyError: “This file has not index value”, err.</div>
+<div class="line">Solution: Actually check whether the column name contained in the file content exists, and enter the correct column name.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="TimeSeriesAnalysis.ProcessData.save_flie">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.ProcessData.</code><code class="sig-name descname">save_flie</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">stock_id</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'stock'</span></em>, <em class="sig-param"><span class="n">file_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'csv'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.ProcessData.save_flie" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save data as file.</p>
+<p>This function can save the input pandas.Series data type data into a csv or txt file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pandas.Series and pandas.DataFrame. pandas.Series: One-dimensional ndarray with axis labels</em><em> (</em><em>including time series</em><em>)</em><em> pandas.DataFrame: Two-dimensional</em><em>, </em><em>size-mutable</em><em>, </em><em>potentially heterogeneous tabular data.</em>) – </p></li>
+<li><p><strong>path</strong> (<em>str. Save files to absolute path</em><em> or </em><em>relative path.If you enter a null string ''</em><em> or </em><em>&quot;&quot;</em><em>,</em><em>it will be saved in the current folder.</em>) – </p></li>
+<li><p><strong>stock_id</strong> (<em>str</em><em>, </em><em>default = 'stock'. File name when saving the file.</em>) – </p></li>
+<li><p><strong>file_format</strong> (<em>str</em><em>, </em><em>default = 'csv'. Archive the crawled stock market price data</em><em>, </em><em>file format is 'csv'</em><em> or </em><em>'txt'.  For example</em><em>, </em><em>'csv'</em><em> ,</em><em>'CSV'</em><em> , </em><em>'txt'</em><em>, </em><em>'TXT'.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">PermissionError: Reject operations that do not comply with permissions.</div>
+<div class="line">Solution: Path or file name cannot be ‘/’.</div>
+</div>
+<div class="line-block">
+<div class="line">AttributeError: ‘list’ object has no attribute ‘to_csv’</div>
+<div class="line">Solution: The data format must be pandas.Series and pandas.DataFrame.</div>
+</div>
+<div class="line-block">
+<div class="line">FileNotFoundError: No such file or file path.</div>
+<div class="line">Solution: Enter the correct file path.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="TimeSeriesAnalysis.ProcessData.split_data">
+<code class="sig-prename descclassname">TimeSeriesAnalysis.ProcessData.</code><code class="sig-name descname">split_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">ratio</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span><a class="headerlink" href="#TimeSeriesAnalysis.ProcessData.split_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split the data into two data sets according to the input ratio.</p>
+<p>This function splits one-dimensional numerical list into two data sets according to the split ratio.
+The first data set is the data length of the split ratio, and the second data set is the data length of the split ratio.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list</em><em> ,</em><em>ndarray</em><em>, </em><em>pandas.Series and pandas.DataFrame. One-dimensional numerical list.</em>) – </p></li>
+<li><p><strong>ratio</strong> (<em>float. Limitation factor: 0 &lt; ratio &lt;1. The split ratio is a floating point number used to determine the respective lengths of the two data sets after splitting.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Two one-dimensional data sets. The first data set is the data length of the split ratio, and the second data set is the data length of the split ratio.</p>
+</dd>
+</dl>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="line-block">
+<div class="line">TypeError: ‘data’ of type ‘NoneType’.</div>
+<div class="line">Solution: ‘data’ must be one-dimensional numerical list.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: ‘ratio’ must be between 0 and 1, excluding 0 and 1.</div>
+<div class="line">Solution: Enter a floating point number greater than 0 and less than 1.</div>
+</div>
+<div class="line-block">
+<div class="line">ValueError: There are less than two numerical data in the list.</div>
+<div class="line">Solution: There are at least two numerical data in the list.</div>
+</div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-TimeSeriesAnalysis">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-TimeSeriesAnalysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="timeseriesanalysis">
+<h3>TimeSeriesAnalysis<a class="headerlink" href="#timeseriesanalysis" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="module">
+<h4>module<a class="headerlink" href="#module" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Chart</dt><dd><p>Time series data related drawing function.</p>
+</dd>
+<dt>Model</dt><dd><p>This module contains time series models for forecasting.</p>
+</dd>
+<dt>ProcessData</dt><dd><p>This module contains the access and processing methods of time series data.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Math.html" class="btn btn-neutral float-left" title="Math package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, leodflag
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
