@@ -23,12 +23,12 @@
     * [TimesML (PyPI)](https://pypi.org/project/TimesML/)
     * [User Manual](https://leodflag.github.io/TimesML_html/)
     * [Quick Start Guide](https://github.com/leodflag/TimesML/blob/master/TimesML_example.ipynb)
-    ![image](https://github.com/leodflag/leodflag.github.io/blob/master/portfolio_img/TimesMLChart.png)
+    ![image](https://github.com/leodflag/leodflag.github.io/blob/main/portfolio_img/TimesMLChart.png)
 
 * Optimization Algorithm
 
     * [Gene Algorithm(基因演算法)](https://github.com/leodflag/Python_Optimization-Algorithm)
-    ![image](https://github.com/leodflag/leodflag.github.io/blob/master/portfolio_img/TimesMLChart.png)
+    ![image](https://github.com/leodflag/leodflag.github.io/blob/main/portfolio_img/TimesMLChart.png)
     * [Particle Swarm Optimization(粒子群最佳化演算法)](https://github.com/leodflag/Python_PSO)
     * [Lion Algorithm(獅群演算法)](https://github.com/leodflag/Python_LionAlgorithm)
 
