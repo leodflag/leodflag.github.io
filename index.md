@@ -28,18 +28,33 @@
 * Optimization Algorithm
 
     * [Gene Algorithm(基因演算法)](https://github.com/leodflag/Python_Optimization-Algorithm)
-    <img src="/portfolio_img/TimesMLChart.png"/>
+    <img src="/portfolio_img/gene.png"/>
+
     * [Particle Swarm Optimization(粒子群最佳化演算法)](https://github.com/leodflag/Python_PSO)
+    <img src="/portfolio_img/PSO.png"/>
+
     * [Lion Algorithm(獅群演算法)](https://github.com/leodflag/Python_LionAlgorithm)
+    <img src="/portfolio_img/Lion.png"/>
+
 
 * Machine Learning
 
     * [Perceptron(感知機)](https://github.com/leodflag/Python_PLA)
+    <img src="/portfolio_img/PLA.png"/>
+
     * [Ordinary Least Squares Linear Regression(普通最小平方線性迴歸)](https://github.com/leodflag/Python_Linear_Regression)
+    <img src="/portfolio_img/linear_reg.png"/>
+
     * [Kmeans Clustering(K-means分群)](https://github.com/leodflag/Python_Kmeans_Clustering)
+    <img src="/portfolio_img/k-means.png"/>
+
     * [Convolutional Neural Network(卷積神經網路)](https://github.com/leodflag/Python_mnist_keras_cnn)
+    <img src="/portfolio_img/CNN.png"/>
+
 
 * [Finite-state Machine](https://github.com/leodflag/Python_DNA_FSM)
+    <img src="/portfolio_img/FSM.png"/>
+
 
 
 **C++**
@@ -47,13 +62,23 @@
  * Data Structure
 
     * [Linked List(鏈結串列)](https://github.com/leodflag/CPP_Linked_List)
+    <img src="/portfolio_img/linked_list.png"/>
+
     * [DecisionTree(決策樹)](https://github.com/leodflag/CPP_DecisionTree)
+    <img src="/portfolio_img/tree.png"/>
+
 
 * Machine Learning
 
     * [Perceptron(感知機)](https://github.com/leodflag/CPP_PLA)
+    <img src="/portfolio_img/CPP_PLA.png"/>
+
     * [Multiategory Classification Perceptron](https://github.com/leodflag/CPP_Multicategory-Classification_PLA)
+    <img src="/portfolio_img/MPLA.png"/>
+
     * [Multilayer Perceptron(多層感知機)](https://github.com/leodflag/CPP_MLP)
+    <img src="/portfolio_img/MLP.png"/>
+
 
 ### 經歷
 ----
@@ -64,14 +89,20 @@
 
          介紹自主開發的API套件，其可針對時間序列數據建立統計或機器學習模型，協助開發人員或資料科學家進行分析與預測
 
+    <img src="/portfolio_img/aiTalk_TimesML.jpg"/>
+
     * 發表碩士論文  (2020.7)
 
         以改良式全卷積U型神經網路做單目視覺深度估計
+
+    <img src="/portfolio_img/aiTalk_Unet.jpg"/>
 
 #### 專案實習生
 * 財團法人台灣建築中心  (2018.6~2018.12)
 
     負責網路爬蟲、供應鏈管理流程分析
+
+    <img src="/portfolio_img/TimesMLChart.png"/>
 
 ### 技能
 ----
