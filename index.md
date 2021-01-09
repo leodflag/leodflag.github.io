@@ -1,9 +1,8 @@
 ## 黃玠喬履歷表
 
 <style type="text/css">
-#rcorners3 {
+#img_style {
     border-radius: 200px;
-    background: url(/portfolio_img/me.jpg);
     background-position: left top;
     background-repeat: repeat;
     padding: 80px;
@@ -11,6 +10,7 @@
     height: 150px;
 }
 </style>
+<img class="img_style" src="/portfolio_img/me.jpg"/>
 ### 學歷
 ---
 * 國立臺北教育大學資訊科學學系碩士 (2018/2~2020/7)
