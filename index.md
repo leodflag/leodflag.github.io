@@ -1,10 +1,21 @@
 ## 黃玠喬履歷表
 
+<style type="text/css">
+#rcorners3 {
+    border-radius: 200px;
+    background: url(/portfolio_img/me.jpg);
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 80px;
+    width: 150px;
+    height: 150px;
+}
+</style>
 ### 學歷
 ---
-* 國立臺北教育大學資訊科學學系碩士
-* 中原大學資訊管理學系
-* 中原大學財務金融學系
+* 國立臺北教育大學資訊科學學系碩士 (2018/2~2020/7)
+* 中原大學資訊管理學系學士 (2014/9~2018/1)
+* 中原大學財務金融學系學士 (2013/9~2017/6)
 
 ### 聯絡方式
 ---
@@ -102,13 +113,11 @@
 
     負責網路爬蟲、供應鏈管理流程分析
 
-    <img src="/portfolio_img/TimesMLChart.png"/>
-
 ### 技能
 ----
 * Language
     
-    Python
+    Python (sklearn、Keras、Tenserflow)
     C++
     C
     Java
